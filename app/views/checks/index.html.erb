@@ -8,7 +8,8 @@
 <br><br>
 
 <% @check_days.each{|k,v| %>
-  <h3><%= k %></h3><br>
+  <hr>
+  <h3><%= k %> -- <%= link_to 'New Check', new_check_path %></h3><br>
   <table>
     <% v.each{|chck_set| %>
       <tbody>
@@ -26,7 +27,9 @@
       </tbody>
     <% } %>
   </table>
-  <br><br>
+  <br>
+<h3><%= link_to 'New Check', new_check_path %></h3>
+  <br>
 <% } %>
 
 <br><br>
@@ -34,4 +37,4 @@
 
 
 
-<%= link_to 'New Check', new_check_path %>
+
