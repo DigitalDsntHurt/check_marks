@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  deadline: 
+  completed_at: 
+  created_at: 
+  updated_at: 
+
+two:
+  title: 
+  deadline: 
+  completed_at: 
+  created_at: 
+  updated_at: 

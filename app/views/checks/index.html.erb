@@ -1,0 +1,37 @@
+<hr>
+<br><br>
+
+<p id="notice"><%= notice %></p>
+
+<br><br>
+<hr>
+<br><br>
+
+<% @check_days.each{|k,v| %>
+  <h3><%= k %></h3><br>
+  <table>
+    <% v.each{|chck_set| %>
+      <tbody>
+        <tr>
+          <td></td>
+          <td><%= chck_set.title %></td>
+          <td>
+            <% if chck_set.completed_at != nil %>
+            <center><strong>Done! on <%= chck_set.completed_at %></strong></center>
+          <% else %>
+            <center><%= button_to "Check It", {:controller => "checks", :action => "check_mark", :id => chck_set.id}, :method=>:put %></center>
+          <% end %>
+        </td>
+        </tr>
+      </tbody>
+    <% } %>
+  </table>
+  <br><br>
+<% } %>
+
+<br><br>
+<hr>
+
+
+
+<%= link_to 'New Check', new_check_path %>

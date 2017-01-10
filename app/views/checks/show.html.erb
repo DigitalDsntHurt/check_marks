@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @check.title %>
+</p>
+
+<p>
+  <strong>Deadline:</strong>
+  <%= @check.deadline %>
+</p>
+
+<p>
+  <strong>Completed at:</strong>
+  <%= @check.completed_at %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @check.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @check.updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_check_path(@check) %> |
+<%= link_to 'Back', checks_path %>
